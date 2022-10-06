@@ -6,7 +6,7 @@ homepage: https://github.com/erluxman
 issue_tracker: https://github.com/erluxman
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -15,7 +15,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  cached_network_image: ^1.1.1
+  cached_network_image: ^3.2.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec

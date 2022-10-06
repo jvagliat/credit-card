@@ -143,14 +143,13 @@ class _CreditCardWidgetState extends State<CreditCardWidget>
     BuildContext context,
     Orientation orientation,
   ) {
-    final TextStyle defaultTextStyle = Theme.of(context).textTheme.title.merge(
-          TextStyle(
-            color: Colors.black,
-            fontFamily: 'halter',
-            fontSize: 16,
-            package: 'credit_card',
-          ),
-        );
+    final TextStyle defaultTextStyle =
+        Theme.of(context).textTheme.bodyText2.copyWith(
+              color: Colors.black,
+              fontFamily: 'halter',
+              fontSize: 16,
+              package: 'credit_card',
+            );
 
     return Container(
       decoration: BoxDecoration(
@@ -217,7 +216,9 @@ class _CreditCardWidgetState extends State<CreditCardWidget>
                               padding: const EdgeInsets.all(5),
                               child: Text(
                                 widget.cvvCode.isEmpty
-                                    ? isAmex ? 'XXXX' : 'XXX'
+                                    ? isAmex
+                                        ? 'XXXX'
+                                        : 'XXX'
                                     : isAmex
                                         ? widget.cvvCode.length > 4
                                             ? widget.cvvCode.substring(0, 4)
@@ -264,14 +265,13 @@ class _CreditCardWidgetState extends State<CreditCardWidget>
     BuildContext context,
     Orientation orientation,
   ) {
-    final TextStyle defaultTextStyle = Theme.of(context).textTheme.title.merge(
-          TextStyle(
-            color: Colors.white,
-            fontFamily: 'halter',
-            fontSize: 16,
-            package: 'credit_card',
-          ),
-        );
+    final TextStyle defaultTextStyle =
+        Theme.of(context).textTheme.titleMedium.copyWith(
+              color: Colors.white,
+              fontFamily: 'halter',
+              fontSize: 16,
+              package: 'credit_card',
+            );
 
     return Container(
       margin: const EdgeInsets.all(16),
